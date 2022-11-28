@@ -1,0 +1,23 @@
+<h1>enukesoftware</h1>
+<table>
+  <tr>
+    <th>DateTime</th>
+    <th>Open</th>
+    <th>High</th>
+    <th>Low</th>
+    <th>Close</th>
+    <th>Volume</th>
+  </tr>
+  <tbody>
+    <tr *ngFor= "let i of newArray | keyvalue">
+      <td>{{i.key}}</td>
+      <td *ngFor= "let i of i.value | keyvalue">
+        {{i.value}}
+      </td>
+    </tr>
+
+  </tbody>
+  
+</table>
+
+<router-outlet></router-outlet>
